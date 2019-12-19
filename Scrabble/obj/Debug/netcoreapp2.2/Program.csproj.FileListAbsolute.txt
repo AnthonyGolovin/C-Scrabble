@@ -1,0 +1,4 @@
+/Users/Guest/Desktop/Scrabble.Solution/Scrabble/obj/Debug/netcoreapp2.2/Program.csprojAssemblyReference.cache
+/Users/Guest/Desktop/Scrabble.Solution/Scrabble/obj/Debug/netcoreapp2.2/Program.csproj.CoreCompileInputs.cache
+/Users/Guest/Desktop/Scrabble.Solution/Scrabble/obj/Debug/netcoreapp2.2/Program.AssemblyInfoInputs.cache
+/Users/Guest/Desktop/Scrabble.Solution/Scrabble/obj/Debug/netcoreapp2.2/Program.AssemblyInfo.cs
