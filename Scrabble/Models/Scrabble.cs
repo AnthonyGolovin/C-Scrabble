@@ -6,21 +6,14 @@ namespace ScrabbleBack {
 
     public class ScrabbleLogic
     {
-        public string UserInput = { get; set;}
+       public string UserInput { get; set; }
+       public int TotalScore { get; set; }
 
-        public ScrabbleLogic(string userInput)
+        public ScrabbleLogic(string userInput, string totalScore)
         {
           UserInput = userInput;
           totalScore = ScrabbleScore();
         }
-        //  string onePoint = "aeioulnrst";
-        //  string twoPoint = "dg";
-        //  string threePoint = "bcmp";
-        //  string fourPoint = "fhvwy";
-        //  string fivePoint = "k";
-        //  string eightPoint = "jx";
-        //  string tenPoint = "qz";
-        //  int counter;
 
          public int ScrabbleScore(string userInput)
         {
@@ -33,7 +26,7 @@ namespace ScrabbleBack {
             string tenPoint = "qz";
             int counter;
 
-            for(int i = 0; i < userInput; i++)
+            for(int i = 0; i < userInput.Length; i++)
             {
                 counter = 0;
                 if(onePoint.Contains(userInput[i]))
@@ -62,10 +55,10 @@ namespace ScrabbleBack {
                 }
                 if(tenPoint.Contains(userInput[i]))
                 {
-                    count += 10;
+                    counter += 10;
                 }
             }
-            return counter;
+            return TotalScore;
         }
     }
 }
