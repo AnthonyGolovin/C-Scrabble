@@ -9,13 +9,13 @@ namespace ScrabbleBack {
        public string UserInput { get; set; }
        public int TotalScore { get; set; }
 
-        public ScrabbleLogic(string userInput, string totalScore)
+        public ScrabbleLogic(string userInput, int totalScore)
         {
           UserInput = userInput;
-          totalScore = ScrabbleScore();
+          TotalScore = ScrabbleScore(userInput, totalScore);
         }
 
-         public int ScrabbleScore(string userInput)
+         public int ScrabbleScore(string UserInput, int TotalScore)
         {
             string onePoint = "aeioulnrst";
             string twoPoint = "dg";
@@ -26,34 +26,34 @@ namespace ScrabbleBack {
             string tenPoint = "qz";
             int counter;
 
-            for(int i = 0; i < userInput.Length; i++)
+            for(int i = 0; i < UserInput.Length; i++)
             {
                 counter = 0;
-                if(onePoint.Contains(userInput[i]))
+                if(onePoint.Contains(UserInput[i]))
                 {
                     counter ++;
                 }
-                if(twoPoint.Contains(userInput[i]))
+                if(twoPoint.Contains(UserInput[i]))
                 {
                     counter += 2;
                 }
-                if(threePoint.Contains(userInput[i]))
+                if(threePoint.Contains(UserInput[i]))
                 {
                     counter += 3;
                 }
-                if(fourPoint.Contains(userInput[i]))
+                if(fourPoint.Contains(UserInput[i]))
                 {
                     counter += 4;
                 }
-                if(fivePoint.Contains(userInput[i]))
+                if(fivePoint.Contains(UserInput[i]))
                 {
                     counter += 5;
                 }
-                if(eightPoint.Contains(userInput[i]))
+                if(eightPoint.Contains(UserInput[i]))
                 {
                     counter += 8;
                 }
-                if(tenPoint.Contains(userInput[i]))
+                if(tenPoint.Contains(UserInput[i]))
                 {
                     counter += 10;
                 }
